@@ -39,3 +39,12 @@ public class Ex4 {
 	}
 
 }
+
+/*
+ * Passos para desenvolver um algoritmo recursivo
+ * 1) Qual é a instância(versão) mais simples do problema -- > BASE --- o if
+ * 
+ * 2) O que é um pouco mais simples que o problema original?
+ * 
+ * 3) Se eu tiver a resposta do problema 2 como eu consigo resolver o problema original?
+ * */
