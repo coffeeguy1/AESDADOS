@@ -3,7 +3,7 @@ package vetores;
 public class Ex4 {
 
 	public static void main(String[] args) {
-		char vetor[] = new char[20];
+		char vetor[] = new char[26];
 		
 		int c = 0;
 		char a = ' ';
