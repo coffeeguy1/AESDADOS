@@ -7,7 +7,7 @@ public class Ex28 {
 	public static int somaMult(int soma, int mult)
 	{
 		int i = 0;
-		if() return ;
+		if(mult == soma * mult) return mult;
 		else return somaMult(soma, mult + mult);
 	}
 		
