@@ -4,16 +4,17 @@ import javax.swing.JOptionPane;
 
 public class Ex40 {
 	public static void main(String[] args) {
-		int iVetor[] = new int[10];
-		int iIndice, iK;
+		char iVetor[] = new char[10];
+		int iIndice;
+		char iK;
 		for(int i = 0; i < 10; i++)
 		{
-			iVetor[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor da posição " + i));
+			iVetor[i] = JOptionPane.showInputDialog("Digite o valor da posição " + i).charAt(0);
 		}
 		
-		iK = Integer.parseInt(JOptionPane.showInputDialog("Digite a chave de busca"));
+		iK = JOptionPane.showInputDialog("Digite a chave de busca").charAt(0);
 		
-		iIndice = busca(iVetor, 1, iK);
+		iIndice = busca(iVetor, 9, iK);
 		
 		String sTitle = "Busca Linear Recursiva - Saida";
 		String sIO = "O número " + iK;
@@ -26,12 +27,12 @@ public class Ex40 {
 		System.exit(0);
 	}
 	
-	public static int busca(int iV[], int iI, int iK)
+	public static int busca(char iV[], int iI, char iK)
 	{
 		
 		if(iI <= (iV.length-1) && (iK != iV[iI]))
 		{
-			return busca(iV, iI+2,iK);
+			return busca(iV, iI-1,iK);
 		}
 		return iI;
 	}
