@@ -19,7 +19,7 @@ public class Ex40 {
 		String sTitle = "Busca Linear Recursiva - Saida";
 		String sIO = "O caracter " + iK;
 		
-		if(iIndice < iVetor.length)
+		if(iIndice > 0)
 			sIO += " está localizado no indice " + iIndice + " do vetor.";
 		else sIO += " não esta localizado no vetor.";
 		JOptionPane.showMessageDialog(null, sIO, sTitle, JOptionPane.INFORMATION_MESSAGE);
@@ -30,7 +30,7 @@ public class Ex40 {
 	public static int busca(char iV[], int iI, char iK)
 	{
 		
-		if(iI <= (iV.length-1) && (iK != iV[iI]))
+		if(iI == (iV.length - iV.length) && (iK != iV[iI]))
 		{
 			return busca(iV, iI-1,iK);
 		}
