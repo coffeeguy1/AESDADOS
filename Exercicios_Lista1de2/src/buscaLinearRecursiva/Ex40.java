@@ -30,7 +30,7 @@ public class Ex40 {
 	public static int busca(char iV[], int iI, char iK)
 	{
 		
-		if(iI == (iV.length - iV.length) && (iK != iV[iI]))
+		if(iI >= (iV.length - iV.length) && (iK != iV[iI]))
 		{
 			return busca(iV, iI-1,iK);
 		}
