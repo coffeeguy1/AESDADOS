@@ -1,5 +1,7 @@
 package buscaBinaria;
 
+import javax.swing.JOptionPane;
+
 public class Ex42 {
 	
 	public static int busca_binaria(int iVet[], int iK)
@@ -25,8 +27,12 @@ public class Ex42 {
 	}
 	
 	public static void main(String[] args) {
+		int iVetor[] = new int[10];
 		
-
+		for(int i = 0; i < iVetor.length; i++)
+		{
+			iVetor[i] = Integer.valueOf(JOptionPane.showInputDialog("Digite o valor do indice " + i));
+		}
 	}
 
 }
