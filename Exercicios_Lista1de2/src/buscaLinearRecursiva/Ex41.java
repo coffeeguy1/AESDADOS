@@ -4,9 +4,14 @@ import javax.swing.JOptionPane;
 
 public class Ex41 {
 	public static void main(String[] args) {
-		int iVetor[] = new int[] {5,3,2,4,6,1};
-		int iIndice, iK;
+		double iVetor[] = new double[10];
+		double iIndice;
+		double iK;
 		
+		for(int i = 0; i<iVetor.length; i++)
+		{
+			iVetor[i] = Double.valueOf(JOptionPane.showInputDialog("Digite o valor do indice" + i));
+		}
 		iK = Integer.parseInt(JOptionPane.showInputDialog("Digite a chave de busca"));
 		
 		iIndice = busca(iVetor, 0, iK);
@@ -22,7 +27,7 @@ public class Ex41 {
 		System.exit(0);
 	}
 	
-	public static int busca(int iV[], int iI, int iK)
+	public static double busca(double iV[], int iI, double iK)
 	{
 		if(iI <= (iV.length-1) && (iK != iV[iI]))
 		{
