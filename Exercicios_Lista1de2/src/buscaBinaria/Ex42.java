@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Ex42 {
 	
-	public static int busca_binaria(int iVet[], int iK)
+	public static int busca_binaria(char iVet[], char iK)
 	{
 		int iBaixo, iAlto, iMeio;
 		
@@ -27,12 +27,13 @@ public class Ex42 {
 	}
 	
 	public static void main(String[] args) {
-		int iVetor[] = new int[10];
+		char iVetor[] = new char[10];
 		
 		for(int i = 0; i < iVetor.length; i++)
 		{
 			iVetor[i] = Integer.valueOf(JOptionPane.showInputDialog("Digite o valor do indice " + i));
 		}
+		///http://algesd.blogspot.com.br/
 	}
 
 }
