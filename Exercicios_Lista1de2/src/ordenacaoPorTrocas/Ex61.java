@@ -20,7 +20,7 @@ public class Ex61 {
 	public static void main(String[] args) {
 		double vetor[] = new double[20];
 		for(int i =0; i < 20; i++) {
-			vetor[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor de " + i));
+			vetor[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do indice " + i));
 		}
 		
 		bolha(vetor);
