@@ -48,7 +48,7 @@ public class Ex68 {
 		int iM = (iB + iA)/2;
 		if(iB <= iA)
 			if(iK < iV[iM]) return busca(iV, iB, iM - 1, iK);
-			else if(iK > iV[iM]) return busca(iV, iB, iM + 1, iK);
+			else if(iK > iV[iM]) return busca(iV, iM + 1, iA, iK);
 			else return iM;
 		return -1;
 	}
