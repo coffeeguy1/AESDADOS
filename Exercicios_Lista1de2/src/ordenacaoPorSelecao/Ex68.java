@@ -20,7 +20,7 @@ public class Ex68 {
           vet[indMenor] = aux;
        }
     }
-	
+	/*
 	public static int busca_binaria(char iVet[], char iK)
 	{
 		int iBaixo, iAlto, iMeio;
@@ -41,7 +41,18 @@ public class Ex68 {
 			else return iMeio;
 		}
 		return -1;
+	}*/
+	
+	public static int busca(char iV[], int iB, int iA, char iK)
+	{
+		int iM = (iB + iA)/2;
+		if(iB <= iA)
+			if(iK < iV[iM]) return busca(iV, iB, iM - 1, iK);
+			else if(iK > iV[iM]) return busca(iV, iB, iM + 1, iK);
+			else return iM;
+		return -1;
 	}
+	
 	
 	public static void main(String[] args) {
 		char vetor[] = new char[10];
@@ -54,7 +65,7 @@ public class Ex68 {
 		System.out.println(Arrays.toString(vetor));
 		
 		char iK = JOptionPane.showInputDialog("Digite o caractere que você deseja: ").charAt(0);
-		System.out.println(busca_binaria(vetor, iK));
+		System.out.println(busca(vetor,0, 10, iK));
 	}
 
 }
