@@ -21,6 +21,28 @@ public class Ex68 {
        }
     }
 	
+	public static int busca_binaria(char iVet[], char iK)
+	{
+		int iBaixo, iAlto, iMeio;
+		
+		iBaixo = 0;
+		iAlto=iVet.length-1;
+		while(iBaixo <= iAlto)
+		{
+			iMeio=(iBaixo + iAlto)/2;
+			
+			if(iK < iVet[iMeio])
+				{
+					iAlto = iMeio-1;
+				}
+			else if(iK > iVet[iMeio]) {
+				iBaixo = iMeio+1;
+			}
+			else return iMeio;
+		}
+		return -1;
+	}
+	
 	public static void main(String[] args) {
 		char vetor[] = new char[10];
 		
@@ -31,6 +53,8 @@ public class Ex68 {
 		selecao(vetor);
 		System.out.println(Arrays.toString(vetor));
 		
+		char iK = JOptionPane.showInputDialog("Digite o caractere que você deseja: ").charAt(0);
+		System.out.println(busca_binaria(vetor, iK));
 	}
 
 }
