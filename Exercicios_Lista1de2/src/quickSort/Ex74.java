@@ -44,7 +44,7 @@ public class Ex74 {
 	public static void main(String[] args) {
 		char vetor[] = new char[5];
 		
-		for(int i=0; i<vetor.length-1; i++)
+		for(int i=0; i<vetor.length; i++)
 		{
 			vetor[i] =  JOptionPane.showInputDialog("Qual o valor do indice: " + i).charAt(0);
 		}
