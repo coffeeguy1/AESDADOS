@@ -34,7 +34,7 @@ public class Ex83 {
 			
 			while(w1.length != j && w2.length != k)
 			{
-				if(w1[j] >= w2[k])
+				if(w1[j] <= w2[k])
 			 		{
 						w[i] = w1[j];
 							i++;
