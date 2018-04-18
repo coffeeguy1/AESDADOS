@@ -2,7 +2,7 @@ package metodosRecursivos;
 
 import java.util.Scanner;
 
-public class Ex26 {
+public class Ex25 {
 
 	public static int busca(float vet[], int i, float procurado)
 	{
