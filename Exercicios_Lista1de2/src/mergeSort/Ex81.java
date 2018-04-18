@@ -62,9 +62,9 @@ public class Ex81 {
 		
 	}
 	public static void main(String[] args) {
-		double vetor[] = new double[10];
+		double vetor[] = new double[20];
 		
-		for(int i=0; i < 10; i++)
+		for(int i=0; i < 20; i++)
 		{
 			vetor[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do indice " + i));
 		}
