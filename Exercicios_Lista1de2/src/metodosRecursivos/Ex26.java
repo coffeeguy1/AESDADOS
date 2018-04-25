@@ -4,8 +4,13 @@ import javax.swing.JOptionPane;
 public class Ex26 {
 	public static int multDiv = 0;
 	//public static int calc = 0;   /// essa variavel será responsável por dividir os valores.
-	public static int MDC(int n1, int n2, int calc)
+	public static int calcularMdc(int a, int b)
 	{
+		if ( a == 0 ) 
+            return b;
+		else return calcularMdc( b % a, a );
+		
+		/*
 		if(n1 == 1 && n2 == 1) return multDiv;  
 		if(n1 % calc == 0)
 		{
@@ -25,6 +30,7 @@ public class Ex26 {
 			return MDC(n1, n2, calc++);
 		}
 		return -1;
+		*/
 	}
 	
 	
@@ -32,7 +38,7 @@ public class Ex26 {
 		int n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor: "));
 		int n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor: "));
 		
-		System.out.println(MDC(n1, n2, 2));
+		System.out.println(calcularMdc(n1, n2));
 		//MDC(180, 240, 270) = 2 x 3 x 5 = 30.
 		
 		
