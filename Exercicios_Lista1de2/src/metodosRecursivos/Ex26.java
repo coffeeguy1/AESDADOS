@@ -2,8 +2,11 @@ package metodosRecursivos;
 
 import javax.swing.JOptionPane;
 public class Ex26 {
-	public static int multDiv = 0;
-	//public static int calc = 0;   /// essa variavel será responsável por dividir os valores.
+	/*
+	 * 
+	 * 
+	 * 
+	 * */
 	public static int MDC(int n1, int n2)
 	{
 		if ( n1 == 0 ) return n2;
