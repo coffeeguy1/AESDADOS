@@ -4,11 +4,11 @@ import javax.swing.JOptionPane;
 public class Ex26 {
 	public static int multDiv = 0;
 	//public static int calc = 0;   /// essa variavel será responsável por dividir os valores.
-	public static int calcularMdc(int a, int b)
+	public static int calcularMdc(int n1, int n2)
 	{
-		if ( a == 0 ) 
-            return b;
-		else return calcularMdc( b % a, a );
+		if ( n1 == 0 ) 
+        return n2;
+		else return calcularMdc( n2 % n1, n1 );
 		
 		/*
 		if(n1 == 1 && n2 == 1) return multDiv;  
