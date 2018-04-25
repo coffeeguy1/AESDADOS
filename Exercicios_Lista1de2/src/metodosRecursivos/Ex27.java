@@ -7,13 +7,12 @@ public class Ex27 {
 	{
 		if(p == 1) return n;
 		else {
-			if(n == 1) return n;
-			else return n * potencia(n, p - 1);
+			return n * potencia(n, p - 1);
 		}
 	}
 	public static void main(String[] args) {
-		int n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor: "));
-		int n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor: "));
+		int n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor: "));
+		int n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor da potência: "));
 		
 		System.out.println(potencia(n1, n2));
 		//MDC(180, 240, 270) = 2 x 3 x 5 = 30.
