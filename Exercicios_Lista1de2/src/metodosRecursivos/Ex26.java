@@ -8,37 +8,14 @@ public class Ex26 {
 	{
 		if ( n1 == 0 ) return n2;
 		else return MDC( n2 % n1, n1 );
-		
-		/*
-		if(n1 == 1 && n2 == 1) return multDiv;  
-		if(n1 % calc == 0)
-		{
-			return MDC(n1/calc, n2, calc);
-		}
-		else if(n1 != 1) {
-			return MDC(n1, n2, calc++);
-		}
-		calc = 2;
-		if(n2 % calc == 0)
-		{
-			System.out.println("chegou aqui" + calc);
-			return MDC(n1, n2/calc, calc);
-		}
-		else if(n2 != 1)
-		{
-			return MDC(n1, n2, calc++);
-		}
-		return -1;
-		*/
 	}
-	
+	/*http://mundoeducacao.bol.uol.com.br/matematica/mdc-divisoes-sucessivas.htm*/
 	
 	public static void main(String[] args) {
 		int n1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor: "));
 		int n2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor: "));
 		
 		System.out.println(MDC(n1, n2));
-		//MDC(180, 240, 270) = 2 x 3 x 5 = 30.
 		
 		
 	}
