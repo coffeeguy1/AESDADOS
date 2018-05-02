@@ -1,5 +1,7 @@
 package pilha;
 
+import javax.swing.JOptionPane;
+
 public class ExPalindrome {
 	 private char vet[];
 	 private int topo;
@@ -30,9 +32,12 @@ public class ExPalindrome {
 	 }
 	  
 	public static void main(String[] args) {
-			
-		ExPalindrome p1 = new ExPalindrome(10);
-		ExPalindrome p2 = new ExPalindrome(10);
+		
+		String pf = JOptionPane.showInputDialog("Digite a frase/palavra");
+		int tamanho = pf.length();
+		
+		ExPalindrome p1 = new ExPalindrome(tamanho);
+		ExPalindrome p2 = new ExPalindrome(tamanho);
 		  
 		  p1.empilhar('a');
 		  p1.empilhar('m');
