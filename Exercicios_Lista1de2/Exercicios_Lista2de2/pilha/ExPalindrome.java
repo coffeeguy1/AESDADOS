@@ -1,24 +1,24 @@
 package pilha;
 
 public class ExPalindrome {
-	private int vet[];
+	 private char vet[];
 	 private int topo;
 
 	  public ExPalindrome(int tamanho)
 	 {
-	  vet = new int[tamanho];
+	  vet = new char[tamanho];
 	  topo = -1;
 	 }
 
-	  public void empilhar(int x)
+	  public void empilhar(char x)
 	 {
 	  topo++;
 	  vet[topo] = x;
 	 }
 
-	  public int desempilhar()
+	  public char desempilhar()
 	 {
-	  int aux = vet[topo];
+	  char aux = vet[topo];
 	  topo--;
 	  return aux;
 	 }
@@ -34,17 +34,16 @@ public class ExPalindrome {
 		ExPalindrome p1 = new ExPalindrome(10);
 		ExPalindrome p2 = new ExPalindrome(10);
 		  
-		  p1.empilhar(1);
-		  p1.empilhar(2);
-		  p1.empilhar(3);
-		  p1.empilhar(4);
-		  p1.empilhar(5);
-		  p1.empilhar(6);
-		  p1.empilhar(7);
+		  p1.empilhar('a');
+		  p1.empilhar('m');
+		  p1.empilhar('a');
+		  p1.empilhar('n');
+		  p1.empilhar('d');
+		  p1.empilhar('a');
 
 		   while(! p1.vazia())
 		  {
-		   int aux = p1.desempilhar();
+		   char aux = p1.desempilhar();
 		   System.out.println(aux);
 		   p2.empilhar( aux );
 		  }
