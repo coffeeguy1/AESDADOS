@@ -39,13 +39,20 @@ public class ExPalindrome {
 		ExPalindrome p1 = new ExPalindrome(tamanho);
 		ExPalindrome p2 = new ExPalindrome(tamanho);
 		  
+		char b[] = pf.toCharArray();
+		  
+		for (char c : b) 
+		{
+			p1.empilhar(c);
+		}
+		/*
 		  p1.empilhar('a');
 		  p1.empilhar('m');
 		  p1.empilhar('a');
 		  p1.empilhar('n');
 		  p1.empilhar('d');
 		  p1.empilhar('a');
-
+*/
 		   while(! p1.vazia())
 		  {
 		   char aux = p1.desempilhar();
