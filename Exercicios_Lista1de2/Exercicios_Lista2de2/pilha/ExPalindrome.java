@@ -37,33 +37,33 @@ public class ExPalindrome {
 		int tamanho = pf.length();
 		
 		ExPalindrome p1 = new ExPalindrome(tamanho);
-		ExPalindrome p2 = new ExPalindrome(tamanho);
+		
 		  
 		char b[] = pf.toCharArray();
-		  
+		
+		String invertido = "";
+		 
 		for (char c : b) 
 		{
 			p1.empilhar(c);
 		}
-		/*
-		  p1.empilhar('a');
-		  p1.empilhar('m');
-		  p1.empilhar('a');
-		  p1.empilhar('n');
-		  p1.empilhar('d');
-		  p1.empilhar('a');
-*/
-		   while(! p1.vazia())
-		  {
-		   char aux = p1.desempilhar();
-		   System.out.println(aux);
-		   p2.empilhar( aux );
-		  }
-		  
-		  while(! p2.vazia())
-		  {
-		   System.out.println(p2.desempilhar());
-		  }
+		
+		while(! p1.vazia())
+		{
+		  invertido = invertido + p1.desempilhar(); 
+		}
+		
+		System.out.println(invertido);
+		
+		if(invertido.equals(pf))
+		{
+			System.out.println("É palindrome");
+			
+		}else {
+			System.out.println("Não é palindrome");
+		}
+
+		
 	}
 
 }
