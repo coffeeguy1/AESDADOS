@@ -89,9 +89,29 @@ public class PintarCoracao {
 	                  f.enfileirar(x+1);
 	                  f.enfileirar(y);
 	               }
+	               
+	               if((x-1)<mat.length && mat[x-1][y] == 0) //abaixo
+	               {
+	                  f.enfileirar(x-1);
+	                  f.enfileirar(y);
+	               }
+	               
+	               if((y+1)<mat[0].length && mat[x][y+1] == 0) //abaixo
+	               {
+	                  f.enfileirar(x);
+	                  f.enfileirar(y+1);
+	               }
+	               
+	               if((y-1)<mat[0].length && mat[x][y-1] == 0) //abaixo
+	               {
+	                  f.enfileirar(x);
+	                  f.enfileirar(y-1);
+	               }
+	               
 	            }
 
 	         }
+	        
 	         
 	         f.mostrarMatriz(mat);
 }
