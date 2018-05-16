@@ -47,13 +47,14 @@ public class Ex15 {
 		int parada = 0;
 		while(parada == 0)
 		{
-			escolha = Integer.parseInt(JOptionPane.showInputDialog("1-Inserir Elementos" + "2-Consultar Elementos" + "3-Retirar Elementos" + "4-Sair"));
+			escolha = Integer.parseInt(JOptionPane.showInputDialog("1-Inserir Elementos \n" + "2-Consultar Elementos \n" + "3-Retirar Elementos \n" + "4-Sair"));
 			if(escolha == 1)
 			{
 				for(int i = 0; i < 10; i++)
 				{
 					valor = Integer.valueOf(JOptionPane.showInputDialog("Digite um valor na fila."));
 					enQueueC(valor);
+					
 				}
 				
 				for(int i=0; i<10; i++)
@@ -64,7 +65,8 @@ public class Ex15 {
 			}
 			if(escolha == 2)
 			{
-				
+				System.out.println("O primeiro valor é: " + front());
+				JOptionPane.showMessageDialog(null, front());
 			}
 			if(escolha == 3)
 			{
@@ -72,10 +74,7 @@ public class Ex15 {
 			}
 			if(escolha == 4)
 			{
-				
-			}
-			else {
-				JOptionPane.showMessageDialog(null, "Nada foi escolhido");
+				break;
 			}
 		}
 	}
