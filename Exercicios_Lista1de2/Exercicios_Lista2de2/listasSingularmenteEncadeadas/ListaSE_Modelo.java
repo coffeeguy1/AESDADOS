@@ -152,13 +152,13 @@ public class ListaSE_Modelo {
 		lista = new ListaSE_Modelo();
 		// Recebe o elemento do nó e o insere na cabeça da lista
 		int valorCauda = 0;
-		for(int i = 0; i < 10; i++)
+		for(int i = 0; i < 2; i++)
 		{
 		 valorCauda = Integer.parseInt(JOptionPane.showInputDialog("Qual o valor da cauda?"));
 		 lista.putTail(valorCauda);
 		}
-		
-		System.out.println(lista.size());
+		System.out.println("Ultimo numero da lista: " + lista.viewTail());
+		System.out.println("Tamanho da lista: " + lista.size());
 		
 	}
 }
