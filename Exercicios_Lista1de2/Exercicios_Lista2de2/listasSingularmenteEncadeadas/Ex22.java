@@ -145,18 +145,47 @@ public class Ex22 {
 			return bR;
 		}
 		
+		public String toString()
+		{
+			String saida = "";
+			NodeSE inicio = nsInicio;
+			while(inicio != null)
+			{
+				saida = saida + inicio.getElement() + " -> ";
+				inicio = inicio.getNext();
+			}
+			return saida;
+		}
+		
 		public static Ex22 lista;
 		public static void main(String[] args) {
 			/*Instância da lista*/
 			lista = new Ex22();
 			// Recebe o elemento do nó e o insere na cabeça da lista
 			int valorCauda = 0;
-			for(int i = 0; i < 2; i++)
+			int sair = 0;
+			int choose = 0;
+			
+			while(sair != 3)
 			{
-			 valorCauda = Integer.parseInt(JOptionPane.showInputDialog("Qual o valor da cauda?"));
-			 lista.putTail(valorCauda);
+				choose = Integer.parseInt(JOptionPane.showInputDialog("1 - Inserir um novo nó\n"+ 
+												"2 - Remover ultimo nó\n"+
+													"3 - Sair"));
+				if(choose == 1)
+				{
+					valorCauda = Integer.parseInt(JOptionPane.showInputDialog("Qual o valor da cauda?"));
+					lista.putTail(valorCauda);
+				}
+				
+				else if(choose == 2) {
+					JOptionPane.showMessageDialog(null, "Ultimo numero da lista: " + lista.takeTail());
+				}
+				
+				else if(choose == 3)
+				{
+					break;
+				}
+			System.out.println("Tamanho da lista: " + lista.size() + " Lista: " + lista);
 			}
-			System.out.println("Ultimo numero da lista: " + lista.viewTail());
-			System.out.println("Tamanho da lista: " + lista.size());
 		}
 }
