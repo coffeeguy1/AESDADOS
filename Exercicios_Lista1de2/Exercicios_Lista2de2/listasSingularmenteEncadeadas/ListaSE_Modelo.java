@@ -1,5 +1,7 @@
 package listasSingularmenteEncadeadas;
 
+import javax.swing.JOptionPane;
+
 public class ListaSE_Modelo {
 		/*
 		 * ALGESD - Nó em Lista Singularmente Encadeada - Classe NodeSE
@@ -149,12 +151,15 @@ public class ListaSE_Modelo {
 		/*Instância da lista*/
 		lista = new ListaSE_Modelo();
 		// Recebe o elemento do nó e o insere na cabeça da lista
-		lista.putHead(dspMs.recebe(sC2, sM2));
-		
-		if(lista.isEmpty())
+		int valorCauda = 0;
+		for(int i = 0; i < 10; i++)
 		{
-			
+		 valorCauda = Integer.parseInt(JOptionPane.showInputDialog("Qual o valor da cauda?"));
+		 lista.putTail(valorCauda);
 		}
+		
+		System.out.println(lista.size());
+		
 	}
 }
 
