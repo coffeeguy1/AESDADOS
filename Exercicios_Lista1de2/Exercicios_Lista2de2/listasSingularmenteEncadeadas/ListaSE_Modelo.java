@@ -150,6 +150,11 @@ public class ListaSE_Modelo {
 		lista = new ListaSE_Modelo();
 		// Recebe o elemento do nó e o insere na cabeça da lista
 		lista.putHead(dspMs.recebe(sC2, sM2));
+		
+		if(lista.isEmpty())
+		{
+			
+		}
 	}
 }
 
